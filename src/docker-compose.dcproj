@@ -10,10 +10,9 @@
     <DockerServiceName>toshi.core.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="docker-compose.override.yml">
-      <DependentUpon>docker-compose.yml</DependentUpon>
-    </None>
+    <None Include="db-docker\init.sql" />
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="db-docker\Dockerfile" />
   </ItemGroup>
 </Project>

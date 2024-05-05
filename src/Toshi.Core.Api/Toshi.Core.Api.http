@@ -1,6 +1,0 @@
-@Toshi.Core.Api_HostAddress = http://localhost:5269
-
-GET {{Toshi.Core.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

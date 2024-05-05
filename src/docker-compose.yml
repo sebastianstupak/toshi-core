@@ -8,6 +8,10 @@ services:
       context: .
       dockerfile: Toshi.Core.Api/Dockerfile
     environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8082
+      - ASPNETCORE_HTTPS_PORTS=8084
+      - ASPNETCORE_URLS=https://+:443;http://+:80
       - ConnectionStrings__AppDb=Server=db;Port=5432;Database=toshi;User Id=toshi_user;Password=password;
     ports:
       - 8082:80
@@ -17,17 +21,19 @@ services:
         condition: service_healthy
 
   db:
-    # TODO: Postgis
-    image: postgres:latest
     container_name: db_toshi
+    build:
+      context: .
+      dockerfile: ./db-docker/Dockerfile
     restart: always
     environment:
-      - POSTGRES_USER=toshi_user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=toshi
+      POSTGRES_USER: toshi_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: toshi
     ports:
       - "5432:5432"
     volumes:
+      - ./db-docker:/docker-entrypoint-initdb.d/
       - db:/var/lib/postgresql/data
     healthcheck:
       test:

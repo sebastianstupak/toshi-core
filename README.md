@@ -10,6 +10,10 @@ town; city; municipal; urban;
 
 ---
 
+## Contributing
+
+- [Development setup](./docs/development-setup.md)
+
 ## Documentation
 
 TODO
