@@ -1,0 +1,44 @@
+version: '3.4'
+
+services:
+  toshi.core.api:
+    container_name: toshi.core.api
+    image: ${DOCKER_REGISTRY-}toshicoreapi
+    build:
+      context: .
+      dockerfile: Toshi.Core.Api/Dockerfile
+    environment:
+      - ConnectionStrings__AppDb=Server=db;Port=5432;Database=toshi;User Id=toshi_user;Password=password;
+    ports:
+      - 8082:80
+      - 8084:443
+    depends_on: 
+      db:
+        condition: service_healthy
+
+  db:
+    # TODO: Postgis
+    image: postgres:latest
+    container_name: db_toshi
+    restart: always
+    environment:
+      - POSTGRES_USER=toshi_user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=toshi
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -q -d postgres://postgres:password@localhost:5432/toshi",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  db:

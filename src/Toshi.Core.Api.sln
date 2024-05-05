@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toshi.Core.Api", "Toshi.Core.Api\Toshi.Core.Api.csproj", "{36A5CDC3-2C39-4879-855B-13EE21DB73DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.Api", "Toshi.Core.Api\Toshi.Core.Api.csproj", "{36A5CDC3-2C39-4879-855B-13EE21DB73DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DE9D39D-0362-475D-B29F-DA879390FD63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toshi.Core.Shared", "Toshi.Core.Shared\Toshi.Core.Shared.csproj", "{8C82CC25-FCBD-41A5-AFF6-D2CD05590026}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3D3E4819-673A-49F7-A4FE-9CB550A23FA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toshi.Core.Api.Tests", "..\test\Toshi.Core.Api.Tests\Toshi.Core.Api.Tests.csproj", "{8DE752BB-8EC9-4FDD-9667-E38BA42C602E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,26 @@ Global
 		{36A5CDC3-2C39-4879-855B-13EE21DB73DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A5CDC3-2C39-4879-855B-13EE21DB73DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A5CDC3-2C39-4879-855B-13EE21DB73DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C82CC25-FCBD-41A5-AFF6-D2CD05590026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C82CC25-FCBD-41A5-AFF6-D2CD05590026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C82CC25-FCBD-41A5-AFF6-D2CD05590026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C82CC25-FCBD-41A5-AFF6-D2CD05590026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE752BB-8EC9-4FDD-9667-E38BA42C602E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE752BB-8EC9-4FDD-9667-E38BA42C602E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE752BB-8EC9-4FDD-9667-E38BA42C602E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE752BB-8EC9-4FDD-9667-E38BA42C602E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36A5CDC3-2C39-4879-855B-13EE21DB73DF} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+		{8C82CC25-FCBD-41A5-AFF6-D2CD05590026} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+		{8DE752BB-8EC9-4FDD-9667-E38BA42C602E} = {3D3E4819-673A-49F7-A4FE-9CB550A23FA1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AA251DE-3E7E-482A-B90B-8F8E63FC3CAF}
