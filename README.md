@@ -4,9 +4,11 @@ Core of Toshi - 3D City in web.
 
 ---
 
-**都市** (_とし_) - _toshi_
+## 都市 (とし) - toshi
 
-noun, town; city; municipal; urban;
+**noun**
+
+town; city; municipal; urban;
 
 ---
 
