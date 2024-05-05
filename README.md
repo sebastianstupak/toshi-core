@@ -1,8 +1,6 @@
-# 都市 (Toshi) Core
+# Toshi Core
 
-Core of Toshi - 3D City in web.
-
----
+3D City in web.
 
 ## 都市 (とし) - toshi
 
