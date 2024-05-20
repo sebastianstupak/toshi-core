@@ -5,8 +5,8 @@ services:
     container_name: toshi.core.api
     image: ${DOCKER_REGISTRY-}toshicoreapi
     build:
-      context: .
-      dockerfile: Toshi.Core.Api/Dockerfile
+      context: src
+      dockerfile: ./Toshi.Core.API/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8082
@@ -21,10 +21,8 @@ services:
         condition: service_healthy
 
   db:
+    image: postgres:latest
     container_name: db_toshi
-    build:
-      context: .
-      dockerfile: ./db-docker/Dockerfile
     restart: always
     environment:
       POSTGRES_USER: toshi_user
@@ -33,7 +31,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db-docker:/docker-entrypoint-initdb.d/
       - db:/var/lib/postgresql/data
     healthcheck:
       test:

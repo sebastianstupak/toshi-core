@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DE9D39D-0362-475D-B29F-DA879390FD63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3D3E4819-673A-49F7-A4FE-9CB550A23FA1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.API", "src\Toshi.Core.Api\Toshi.Core.API.csproj", "{E1248C28-48A9-4111-852F-F78CCC0E81C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.Importer", "src\Toshi.Core.Importer\Toshi.Core.Importer.csproj", "{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.Api.Tests", "test\Toshi.Core.Api.Tests\Toshi.Core.Api.Tests.csproj", "{5906A498-10B2-4BBF-BDBD-4CA99F8C489A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.Shared", "src\Toshi.Core.Shared\Toshi.Core.Shared.csproj", "{F96D76ED-4C97-4D49-97A8-C8F0205F82EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toshi.Core.CLI", "src\Toshi.Core.CLI\Toshi.Core.CLI.csproj", "{6CAF99FF-ECD6-424D-A6EC-01D47417D899}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE54CF0-7965-4D8E-8261-2AB0EC8058F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1248C28-48A9-4111-852F-F78CCC0E81C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1248C28-48A9-4111-852F-F78CCC0E81C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1248C28-48A9-4111-852F-F78CCC0E81C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1248C28-48A9-4111-852F-F78CCC0E81C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5906A498-10B2-4BBF-BDBD-4CA99F8C489A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5906A498-10B2-4BBF-BDBD-4CA99F8C489A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5906A498-10B2-4BBF-BDBD-4CA99F8C489A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5906A498-10B2-4BBF-BDBD-4CA99F8C489A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96D76ED-4C97-4D49-97A8-C8F0205F82EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96D76ED-4C97-4D49-97A8-C8F0205F82EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96D76ED-4C97-4D49-97A8-C8F0205F82EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96D76ED-4C97-4D49-97A8-C8F0205F82EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CAF99FF-ECD6-424D-A6EC-01D47417D899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAF99FF-ECD6-424D-A6EC-01D47417D899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAF99FF-ECD6-424D-A6EC-01D47417D899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAF99FF-ECD6-424D-A6EC-01D47417D899}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E1248C28-48A9-4111-852F-F78CCC0E81C8} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+		{AA96C98D-F2AA-492A-BDFB-CDF3EC4DD871} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+		{5906A498-10B2-4BBF-BDBD-4CA99F8C489A} = {3D3E4819-673A-49F7-A4FE-9CB550A23FA1}
+		{F96D76ED-4C97-4D49-97A8-C8F0205F82EA} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+		{6CAF99FF-ECD6-424D-A6EC-01D47417D899} = {7DE9D39D-0362-475D-B29F-DA879390FD63}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AA251DE-3E7E-482A-B90B-8F8E63FC3CAF}
+	EndGlobalSection
+EndGlobal
